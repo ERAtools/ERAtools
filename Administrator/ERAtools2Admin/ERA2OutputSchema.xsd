@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="RESULTS">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="ISSUE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LAYER" type="TableType" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string"></xs:attribute>
+            <xs:attribute name="description" type="xs:string" use="optional"></xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ERA_ERRORS"></xs:element>
+        <xs:element name="ERROR"></xs:element>
+      </xs:choice>
+      <xs:attribute name="analysis_shape" type="xs:string"></xs:attribute>
+      <xs:attribute name="datetime" type="xs:string"></xs:attribute>
+      <xs:attribute name="shape_name" type="xs:string"></xs:attribute>
+      <xs:attribute name="analysis_acreage" type="xs:decimal"></xs:attribute>
+      <xs:attribute name="buffer_acreage" type="xs:decimal"></xs:attribute>
+      <xs:attribute name="system_path" type="xs:string" use="optional"></xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="FieldsType">
+    <xs:sequence maxOccurs="unbounded">
+      <xs:element name="FIELD">
+        <xs:complexType>
+          <xs:attribute name="name"></xs:attribute>
+          <xs:attribute name="alias"></xs:attribute>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="showheaders" type="xs:boolean" default="true" use="optional"></xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="RecordType">
+    <xs:sequence>
+      <xs:element name="VALUES">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:any maxOccurs="unbounded" processContents="skip"></xs:any>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TABLE" type="TableType" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TableType">
+    <xs:sequence>
+      <xs:element name="FIELDS" type="FieldsType"></xs:element>
+      <xs:element name="RECORD" type="RecordType" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string"></xs:attribute>
+    <xs:attribute name="type" type="xs:string"></xs:attribute>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ERA_ANALYSIS title="ERA Tester" xmlns="http://tempuri.org/ERA2Schema.xsd">
+   <WORKSPACES>
+      <SHAPEWORKSPACE name="shp_ws-0" directory="c:\"/>
+      <SDEWORKSPACE name="sde_ws-1" instance="esri_sde" server="fatboy" database="" user="ross" password="ross"/>
+   </WORKSPACES>
+   <ISSUE name="Test Issue" meta="Just Testing">
+      <LAYER name="Track" workspace="shp_ws-0" layerid="track" analysistype="pinpoint" whereexpression="">
+         <FIELD name="TRACK" alias="Track" visible="true" />
+         <FIELD name="Length" alias="Length" visible="true" />
+      </LAYER>
+      <LAYER name="Counties" workspace="sde_ws-1" layerid="ROSS.COUNTIES_FL" analysistype="pinpoint" whereexpression="">
+         <FIELD name="ROSS.COUNTIES_FL.NAME" alias="Name" visible="true"/>
+      </LAYER>
+   </ISSUE>
+</ERA_ANALYSIS>

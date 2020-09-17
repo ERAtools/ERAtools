@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ERA2Schema" targetNamespace="http://tempuri.org/ERA2Schema.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/ERA2Schema.xsd" xmlns:mstns="http://tempuri.org/ERA2Schema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ERA_ANALYSIS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="WORKSPACES" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:choice maxOccurs="unbounded">
+              <xs:element name="SDEWORKSPACE">
+                <xs:complexType>
+                  <xs:attribute name="name" type="xs:string" use="required" />
+                  <xs:attribute name="instance" type="xs:string" use="optional" />
+                  <xs:attribute name="server" type="xs:string" use="required" />
+                  <xs:attribute name="database" type="xs:string" use="optional" />
+                  <xs:attribute name="user" type="xs:string" use="optional" />
+                  <xs:attribute name="password" type="xs:string" use="optional" />
+                  <xs:attribute name="version" type="xs:string" use="optional" default="SDE.DEFAULT" />
+                  <xs:attribute name="authentication_mode" use="optional" default="DBMS" >
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="DBMS" />
+                        <xs:enumeration value="OSA" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SHAPEWORKSPACE">
+                <xs:complexType>
+                  <xs:attribute name="name" type="xs:string" use="required" />
+                  <xs:attribute name="directory" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ACCESSWORKSPACE">
+                <xs:complexType>
+                  <xs:attribute name="name" type="xs:string" use="required" />
+                  <xs:attribute name="database" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:choice>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ISSUE" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LAYER" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:choice maxOccurs="unbounded">
+                    <xs:element name="SORT_FIELDS" type="SortFieldsType" minOccurs="0" maxOccurs="1"></xs:element>
+                    <xs:element name="FIELD" type="FieldType" maxOccurs="unbounded" />
+                    <xs:element name="TABLE" type="TableType" maxOccurs="unbounded" />
+                  </xs:choice>
+                  <xs:attribute name="name" type="xs:string" use="required" />
+                  <xs:attribute name="workspace" type="xs:string" use="required" />
+                  <xs:attribute name="analysistype" use="required">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="comparison"></xs:enumeration>
+                        <xs:enumeration value="distance"></xs:enumeration>
+                        <xs:enumeration value="distance and direction"></xs:enumeration>
+                        <xs:enumeration value="acreage"></xs:enumeration>
+                        <xs:enumeration value="buffer"></xs:enumeration>
+                        <xs:enumeration value="pinpoint"></xs:enumeration>
+                        <xs:enumeration value="weighted average"></xs:enumeration>
+                        <xs:enumeration value="weighted average 2"></xs:enumeration>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="whereexpression" type="xs:string" use="optional" />
+                  <xs:attribute name="layerid" type="xs:string" use="required" />
+                  <xs:attribute name="showheaders" type="xs:boolean" default="true" use="optional" />
+                  <xs:attribute name="summarization" type="xs:boolean" default="false" use="optional" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required" />
+            <xs:attribute name="meta" type="xs:string" use="optional" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="title" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="FieldType">
+    <xs:attribute name="name" type="xs:string" use="required" />
+    <xs:attribute name="alias" type="xs:string" use="required" />
+    <xs:attribute name="visible" type="xs:boolean" default="true" use="optional" />
+    <xs:attribute name="useforurl" type="xs:string" use="optional" />
+    <xs:attribute name="link" type="xs:boolean" default="false" use="optional" />
+    <xs:attribute name="prefix" type="xs:string" use="optional" />
+    <xs:attribute name="suffix" type="xs:string" use="optional" />
+    <xs:attribute name="summary" type="xs:string" use="optional" />
+    <xs:attribute name="wavg_type" use="optional">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="indexed"></xs:enumeration>
+          <xs:enumeration value="rawdata"></xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="TableType">
+    <xs:sequence>
+      <xs:element name="KEYS" type="KeysType" minOccurs="1" maxOccurs="1"></xs:element>
+      <xs:element name="SORT_FIELDS" type="SortFieldsType" minOccurs="0" maxOccurs="1"></xs:element>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="FIELD" type="FieldType" />
+        <xs:element name="TABLE" type="TableType" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required" />
+    <xs:attribute name="workspace" type="xs:string" use="required" />
+    <xs:attribute name="whereexpression" type="xs:string" use="optional" />
+    <xs:attribute name="layerid" type="xs:string" use="required" />
+    <xs:attribute name="showheaders" type="xs:boolean" default="true" use="optional" />
+    <xs:attribute name="summarization" type="xs:boolean" default="false" use="optional" />
+    <xs:attribute name="inline" type="xs:boolean" default="false" use="optional" />
+    <xs:attribute name="innerjoin" type="xs:boolean" default="false" use="optional" />
+    <xs:attribute name="join" default="Attribute" use="optional">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Attribute"></xs:enumeration>
+          <xs:enumeration value="Spatial"></xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="KeysType">
+    <xs:sequence>
+      <xs:element name="KEY" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="parent" type="xs:string" use="required" />
+          <xs:attribute name="child" type="xs:string" use="required" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SortFieldsType">
+    <xs:sequence>
+      <xs:element name="SORT_FIELD" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="field" type="xs:string" use="required"></xs:attribute>
+          <xs:attribute name="direction" type="xs:string" default="ascending" use="optional"></xs:attribute>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

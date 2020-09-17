@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ERAtools2Admin", "ERAtools2Admin\ERAtools2Admin.vbproj", "{89D5AD7B-AEA5-4FDA-BEAD-635E1BB3F90A}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ERATools2Admin_Installer", "ERATools2Admin_Installer\ERATools2Admin_Installer.vdproj", "{7F78A562-0BF4-48E5-8CB9-2E2BAC65B540}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release (no framework)|Any CPU = Release (no framework)|Any CPU
+		Release (no framework)|x64 = Release (no framework)|x64
+		Release (no framework)|x86 = Release (no framework)|x86
+		Release (with framework)|Any CPU = Release (with framework)|Any CPU
+		Release (with framework)|x64 = Release (with framework)|x64
+		Release (with framework)|x86 = Release (with framework)|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89D5AD7B-AEA5-4FDA-BEAD-635E1BB3F90A}.Debug|Any CPU.ActiveCfg = Debug 10|Any CPU
+		{89D5AD7B-AEA5-4FDA-BEAD-635E1BB3F90A}.Debug|Any CPU.Build.0 = Debug 10|Any CPU
+		{89D5AD7B-AEA5-4FDA-BEAD-635E1BB3F90A}.Debug|x64.ActiveCfg = Debug 10|x64
+		{89D5AD7B-AEA5-4FDA-BEAD-635E1BB3F90A}.Debug|x64.Build.0 = Debug 10|x64
+		{89D5AD7B-AEA5-4FDA-BEAD-635E1BB3F90A}.Debug|x86.ActiveCfg = Debug 10|x86
+		{89D5AD7B-AEA5-4FDA-BEAD-635E1BB3F90A}.Debug|x86.Build.0 = Debug 10|x86
+		{89D5AD7B-AEA5-4FDA-BEAD-635E1BB3F90A}.Release (no framework)|Any CPU.ActiveCfg = Release 10|Any CPU
+		{89D5AD7B-AEA5-4FDA-BEAD-635E1BB3F90A}.Release (no framework)|Any CPU.Build.0 = Release 10|Any CPU
+		{89D5AD7B-AEA5-4FDA-BEAD-635E1BB3F90A}.Release (no framework)|x64.ActiveCfg = Release 10|x64
+		{89D5AD7B-AEA5-4FDA-BEAD-635E1BB3F90A}.Release (no framework)|x64.Build.0 = Release 10|x64
+		{89D5AD7B-AEA5-4FDA-BEAD-635E1BB3F90A}.Release (no framework)|x86.ActiveCfg = Release 10|x86
+		{89D5AD7B-AEA5-4FDA-BEAD-635E1BB3F90A}.Release (no framework)|x86.Build.0 = Release 10|x86
+		{89D5AD7B-AEA5-4FDA-BEAD-635E1BB3F90A}.Release (with framework)|Any CPU.ActiveCfg = Release 10|Any CPU
+		{89D5AD7B-AEA5-4FDA-BEAD-635E1BB3F90A}.Release (with framework)|Any CPU.Build.0 = Release 10|Any CPU
+		{89D5AD7B-AEA5-4FDA-BEAD-635E1BB3F90A}.Release (with framework)|x64.ActiveCfg = Release 10|x64
+		{89D5AD7B-AEA5-4FDA-BEAD-635E1BB3F90A}.Release (with framework)|x64.Build.0 = Release 10|x64
+		{89D5AD7B-AEA5-4FDA-BEAD-635E1BB3F90A}.Release (with framework)|x86.ActiveCfg = Release 10|x86
+		{89D5AD7B-AEA5-4FDA-BEAD-635E1BB3F90A}.Release (with framework)|x86.Build.0 = Release 10|x86
+		{7F78A562-0BF4-48E5-8CB9-2E2BAC65B540}.Debug|Any CPU.ActiveCfg = ERAtools2 Administrator (Including .Net Framework)
+		{7F78A562-0BF4-48E5-8CB9-2E2BAC65B540}.Debug|x64.ActiveCfg = ERAtools2 Administrator (Including .Net Framework)
+		{7F78A562-0BF4-48E5-8CB9-2E2BAC65B540}.Debug|x86.ActiveCfg = ERAtools2 Administrator (Including .Net Framework)
+		{7F78A562-0BF4-48E5-8CB9-2E2BAC65B540}.Release (no framework)|Any CPU.ActiveCfg = ERAtools2 Administrator (Excluding .Net Framework)
+		{7F78A562-0BF4-48E5-8CB9-2E2BAC65B540}.Release (no framework)|Any CPU.Build.0 = ERAtools2 Administrator (Excluding .Net Framework)
+		{7F78A562-0BF4-48E5-8CB9-2E2BAC65B540}.Release (no framework)|x64.ActiveCfg = ERAtools2 Administrator (Including .Net Framework)
+		{7F78A562-0BF4-48E5-8CB9-2E2BAC65B540}.Release (no framework)|x64.Build.0 = ERAtools2 Administrator (Including .Net Framework)
+		{7F78A562-0BF4-48E5-8CB9-2E2BAC65B540}.Release (no framework)|x86.ActiveCfg = ERAtools2 Administrator (Excluding .Net Framework)
+		{7F78A562-0BF4-48E5-8CB9-2E2BAC65B540}.Release (no framework)|x86.Build.0 = ERAtools2 Administrator (Excluding .Net Framework)
+		{7F78A562-0BF4-48E5-8CB9-2E2BAC65B540}.Release (with framework)|Any CPU.ActiveCfg = ERAtools2 Administrator (Including .Net Framework)
+		{7F78A562-0BF4-48E5-8CB9-2E2BAC65B540}.Release (with framework)|Any CPU.Build.0 = ERAtools2 Administrator (Including .Net Framework)
+		{7F78A562-0BF4-48E5-8CB9-2E2BAC65B540}.Release (with framework)|x64.ActiveCfg = ERAtools2 Administrator (Including .Net Framework)
+		{7F78A562-0BF4-48E5-8CB9-2E2BAC65B540}.Release (with framework)|x64.Build.0 = ERAtools2 Administrator (Including .Net Framework)
+		{7F78A562-0BF4-48E5-8CB9-2E2BAC65B540}.Release (with framework)|x86.ActiveCfg = ERAtools2 Administrator (Including .Net Framework)
+		{7F78A562-0BF4-48E5-8CB9-2E2BAC65B540}.Release (with framework)|x86.Build.0 = ERAtools2 Administrator (Including .Net Framework)
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal
