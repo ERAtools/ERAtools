@@ -1,0 +1,87 @@
+<ERA_ANALYSIS title="Critical Facilities">
+  <WORKSPACES>
+    <ACCESSWORKSPACE name="CFI" database="c:\ERAtools Training\CriticalFacilities.mdb" />
+    <SDEWORKSPACE name="sde-ws_irm00sdf03" server="irm00sdb03" instance="5151" database="" user="ERAtools" password="gisera2" />
+  </WORKSPACES>
+  <ISSUE name="Emergency Services" meta="">
+    <LAYER name="Correctional Facilities" analysistype="acreage" whereexpression="" workspace="sde-ws_dohsdb09_5153_hse" layerid="HSE.HVA_DEM_Correctional_Faclts" showheaders="False" summarization="False">
+      <SORT_FIELDS>
+      </SORT_FIELDS>
+      <FIELD alias="Description" visible="true" name="Facility_Desc" link="False" useforurl="" prefix="" suffix="" />
+    </LAYER>
+    <LAYER name="Emergency Services" analysistype="acreage" whereexpression="" workspace="CFI" layerid="Emergency_Services" showheaders="False" summarization="False">
+      <SORT_FIELDS>
+      </SORT_FIELDS>
+      <FIELD alias="Description" visible="true" link="False" useforurl="" prefix="" suffix="" name="Facility_Desc" />
+    </LAYER>
+    <LAYER name="Hazardous Materials" analysistype="acreage" whereexpression="" workspace="CFI" layerid="Hazardous_Materials" showheaders="False" summarization="False">
+      <FIELD alias="Description" visible="true" name="Facility_Desc" link="False" useforurl="" prefix="" suffix="" />
+      <SORT_FIELDS>
+      </SORT_FIELDS>
+    </LAYER>
+    <LAYER name="Health Care Facilities" analysistype="acreage" whereexpression="[Facility_Type] = '23' OR [Facility_Type] = '35' OR [Facility_Type] = '18' OR [Facility_Type] = '52' OR [Facility_Type] = '11' OR [Facility_Type] = '18'" workspace="CFI" layerid="HealthCare_Facilities" showheaders="False" summarization="False">
+      <FIELD alias="Description" visible="true" name="Facility_Desc" link="False" useforurl="" prefix="" suffix="" />
+      <SORT_FIELDS>
+        <SORT_FIELD field="Health_x0020_Care_x0020_Facilities_Facility_Desc" direction="ascending" />
+      </SORT_FIELDS>
+    </LAYER>
+  </ISSUE>
+  <ISSUE name="Human Services" meta="">
+    <LAYER name="Educational Facilities" analysistype="acreage" whereexpression="" workspace="CFI" layerid="Education" showheaders="False" summarization="False">
+      <SORT_FIELDS>
+      </SORT_FIELDS>
+      <FIELD alias="Description" visible="true" name="Facility_Desc" link="False" useforurl="" prefix="" suffix="" />
+    </LAYER>
+    <LAYER name="Shelters" analysistype="acreage" whereexpression="" workspace="CFI" layerid="Shelters" showheaders="False" summarization="False">
+      <FIELD alias="Description" visible="true" name="Facility_Desc" link="False" useforurl="" prefix="" suffix="" />
+      <SORT_FIELDS>
+      </SORT_FIELDS>
+    </LAYER>
+  </ISSUE>
+  <ISSUE name="Infrastructure" meta="">
+    <LAYER name="Communications" analysistype="acreage" whereexpression="" workspace="CFI" layerid="Communications" showheaders="False" summarization="False">
+      <FIELD alias="Description" visible="true" name="Facility_Desc" link="False" useforurl="" prefix="" suffix="" />
+      <SORT_FIELDS>
+        <SORT_FIELD field="Communications_Facility_Desc" direction="ascending" />
+      </SORT_FIELDS>
+    </LAYER>
+    <LAYER name="Community Resources" analysistype="acreage" whereexpression="" workspace="CFI" layerid="Community_Resources" showheaders="False" summarization="False">
+      <FIELD alias="Description" visible="true" name="Facility_Desc" link="False" useforurl="" prefix="" suffix="" />
+      <SORT_FIELDS>
+        <SORT_FIELD field="Community_x0020_Resources_Facility_Desc" direction="ascending" />
+      </SORT_FIELDS>
+    </LAYER>
+    <LAYER name="Energy" analysistype="acreage" whereexpression="" workspace="CFI" layerid="Hazardous_Materials" showheaders="False" summarization="False">
+      <FIELD alias="Description" visible="true" name="Facility_Desc" link="False" useforurl="" prefix="" suffix="" />
+      <SORT_FIELDS>
+        <SORT_FIELD field="Energy_Facility_Desc" direction="ascending" />
+      </SORT_FIELDS>
+    </LAYER>
+    <LAYER name="Infrastructure" analysistype="acreage" whereexpression="" workspace="CFI" layerid="Infrastructure" showheaders="False" summarization="False">
+      <FIELD alias="Description" visible="true" name="Facility_Desc" link="False" useforurl="" prefix="" suffix="" />
+      <SORT_FIELDS>
+        <SORT_FIELD field="Infrastructure_Facility_Desc" direction="ascending" />
+      </SORT_FIELDS>
+    </LAYER>
+    <LAYER name="Transporation" analysistype="acreage" whereexpression="" workspace="CFI" layerid="Transportation" showheaders="False" summarization="False">
+      <FIELD alias="Description" visible="true" name="Facility_Desc" link="False" useforurl="" prefix="" suffix="" />
+      <SORT_FIELDS>
+        <SORT_FIELD field="Transporation_Facility_Desc" direction="ascending" />
+      </SORT_FIELDS>
+    </LAYER>
+  </ISSUE>
+  <ISSUE name="Operations" meta="">
+    <LAYER name="Military" analysistype="acreage" whereexpression="" workspace="CFI" layerid="Military" showheaders="False" summarization="False">
+      <FIELD alias="Description" visible="true" name="Facility_Desc" link="False" useforurl="" prefix="" suffix="" />
+      <SORT_FIELDS>
+        <SORT_FIELD field="Military_Facility_Desc" direction="ascending" />
+      </SORT_FIELDS>
+    </LAYER>
+    <LAYER name="Logistics" analysistype="acreage" whereexpression="" workspace="CFI" layerid="Logistics" showheaders="False" summarization="False">
+      <FIELD alias="Description" visible="true" name="Facility_Desc" link="False" useforurl="" prefix="" suffix="" />
+      <SORT_FIELDS>
+        <SORT_FIELD field="Logistics_Facility_Desc" direction="ascending" />
+      </SORT_FIELDS>
+    </LAYER>
+  </ISSUE>
+</ERA_ANALYSIS>

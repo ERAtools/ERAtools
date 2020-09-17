@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B4C35EF2-F5A5-4D00-B819-9027F1CAC358}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ERAtools10</RootNamespace>
+    <AssemblyName>ERAtools10</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ERAtools10.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ERAtools10.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Desktop.AddIns">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Framework">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>.\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutDialog.Designer.vb">
+      <DependentUpon>AboutDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Config.esriaddinx</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.vb" />
+    <Compile Include="ERAAccessWorkspace.vb" />
+    <Compile Include="ERAAnalysisClasses\BufferAnalysis.vb" />
+    <Compile Include="ERAAnalysisClasses\ComparisonResourceAnalysis.vb" />
+    <Compile Include="ERAAnalysisClasses\DistanceAnalysis.vb" />
+    <Compile Include="ERAAnalysisClasses\DistanceAndDirectionAnalysis.vb" />
+    <Compile Include="ERAAnalysisClasses\ERAAnalysis.vb" />
+    <Compile Include="ERAAnalysisClasses\FeatureComparisonAnalysis.vb" />
+    <Compile Include="ERAAnalysisClasses\PinpointAnalysis.vb" />
+    <Compile Include="ERAAnalysisClasses\WeightedAverageAnalysis.vb" />
+    <Compile Include="ERAEvaluation.vb" />
+    <Compile Include="ERAField.vb" />
+    <Compile Include="ERAIssue.vb" />
+    <Compile Include="ERALayerTable.vb" />
+    <Compile Include="ERAListener.vb" />
+    <Compile Include="EraNode.vb" />
+    <Compile Include="ERASDEWorkspace.vb" />
+    <Compile Include="ERAShapeWorkspace.vb" />
+    <Compile Include="ERATable.vb" />
+    <Compile Include="frmERAToolsGUI.Designer.vb">
+      <DependentUpon>frmERAToolsGUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmERAToolsGUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSavedShapes.Designer.vb">
+      <DependentUpon>frmSavedShapes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSavedShapes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectedFeature.Designer.vb">
+      <DependentUpon>frmSelectedFeature.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectedFeature.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettings.Designer.vb">
+      <DependentUpon>frmSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IERAWorkspace.vb" />
+    <Compile Include="Logging.vb" />
+    <Compile Include="MapDrawing.vb" />
+    <Compile Include="modProjections.vb" />
+    <Compile Include="modWorkspaces.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RecordComparer.vb" />
+    <Compile Include="StyleSheet.vb" />
+    <Compile Include="SummarizationProcess.vb" />
+    <Compile Include="SystemWorkspace.vb" />
+    <Compile Include="TextValidation.vb" />
+    <Compile Include="ToolBar_Buttons\ERABaseTool.vb" />
+    <Compile Include="ToolBar_Buttons\ERAtoolsClearButton.vb" />
+    <Compile Include="ToolBar_Buttons\ERAtoolsHelp.vb" />
+    <Compile Include="ToolBar_Buttons\ERAtoolsPointTool.vb" />
+    <Compile Include="ToolBar_Buttons\ERAtoolsPolygonTool.vb" />
+    <Compile Include="ToolBar_Buttons\ERAtoolsPolylineTool.vb" />
+    <Compile Include="ToolBar_Buttons\ERAtoolsSavedShapeTool.vb" />
+    <Compile Include="ToolBar_Buttons\ERAtoolsSelectTool.vb" />
+    <Compile Include="ToolBar_Buttons\ERAtoolsSettings.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutDialog.resx">
+      <DependentUpon>AboutDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmERAToolsGUI.resx">
+      <DependentUpon>frmERAToolsGUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSavedShapes.resx">
+      <DependentUpon>frmSavedShapes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectedFeature.resx">
+      <DependentUpon>frmSelectedFeature.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <AddInContent Include="ERAtoolsHelp.pdf" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Config.esriaddinx">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>ArcGISAddInHostGenerator</Generator>
+      <LastGenOutput>Config.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </AddInContent>
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Resources\ERATools10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="ESRI.ArcGIS.ArcMapUI">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Resources\Clear.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Resources\bmp101.bmp" />
+    <AddInContent Include="Resources\FDEP_logo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Resources\gfclogo 2.gif" />
+    <AddInContent Include="Resources\help.bmp" />
+    <AddInContent Include="Resources\PolyImage.bmp" />
+    <AddInContent Include="Resources\SavedShape.bmp" />
+    <AddInContent Include="Resources\SelectImage.bmp" />
+    <AddInContent Include="Resources\URS_RGB.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="System\acreage.gif" />
+    <None Include="System\area.gif" />
+    <None Include="System\buffer.gif" />
+    <None Include="System\comparison.gif" />
+    <None Include="System\distance.gif" />
+    <None Include="System\dohheader.gif" />
+    <None Include="System\Env Health %28Excel%29.xslt" />
+    <None Include="System\Env Health %28HTML with HVA Key%29.xslt" />
+    <None Include="System\Env Health %28HTML%29.xslt" />
+    <None Include="System\Env Health %28Word%29.xslt" />
+    <None Include="System\Excel.xslt" />
+    <None Include="System\HTML.xslt" />
+    <None Include="System\pinpoint.gif" />
+    <None Include="System\weighted_average.gif" />
+    <None Include="System\Word.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Resources\PointImage.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Resources\LineImage.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="log4net.xml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <ZipFileExtension>esriAddIn</ZipFileExtension>
+    <AddInTargetProduct>Desktop</AddInTargetProduct>
+    <AddInTargetVersion>10.0</AddInTargetVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\ESRI\ESRI.ArcGIS.AddIns.targets" Condition="Exists('$(MSBuildExtensionsPath)\ESRI\ESRI.ArcGIS.AddIns.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  -->
+  <Target Name="AfterBuild">
+    <!-- Gives build warning when add-in targets file is not found. -->
+    <Warning Text="Unable to create .esriAddin; missing ESRI ArcGIS Add-in SDK component(s)." Condition="!Exists('$(MSBuildExtensionsPath)\ESRI\ESRI.ArcGIS.AddIns.targets')" />
+  </Target>
+  <ProjectExtensions>
+    <!-- Default ESRI add-in properties -->
+    <ESRIAddInProperties>
+      <Host>ArcMap</Host>
+    </ESRIAddInProperties>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,103 @@
+<ERA_ANALYSIS title="Environmental Health Facilities">
+  <WORKSPACES>
+    <SDEWORKSPACE name="sde-ws_irm00sdf03" server="irm00sdb03" instance="5151" database="" user="ERAtools" password="gisera2" />
+  </WORKSPACES>
+  <ISSUE name="EH Facilities" meta="">
+    <LAYER name="Limited Use Drinking Water" analysistype="buffer" whereexpression="" workspace="sde-sde-ws_irm00sdf03" layerid="HSE.LimitedUseDrinkingWater" showheaders="True" summarization="False">
+      <SORT_FIELDS />
+      <FIELD alias="Name" visible="true" link="False" useforurl="" prefix="" suffix="" name="NAME" />
+      <FIELD alias="Address" visible="true" name="ADD1_FIXED" link="False" useforurl="" prefix="" suffix="" />
+      <FIELD alias="City" visible="true" name="CITY" link="False" useforurl="" prefix="" suffix="" />
+      <FIELD alias="ZIP" visible="true" name="ZIP" link="False" useforurl="" prefix="" suffix="" />
+      <TABLE name="Surge Zones" whereexpression="" workspace="sde-ws_irm00sdf03" layerid="HSE.FDEMSurgeZone" showheaders="True" summarization="False" inline="True" join="Spatial">
+        <KEYS />
+        <FIELD alias="Storm Surge Category" visible="true" name="CATEGORY" link="False" useforurl="" prefix="" suffix="" />
+        <SORT_FIELDS />
+      </TABLE>
+    </LAYER>
+    <LAYER name="Mobile Home and RV Parks" analysistype="buffer" whereexpression="" workspace="sde-sde-ws_irm00sdf03" layerid="HSE.MhRVParks" showheaders="False" summarization="False">
+      <SORT_FIELDS />
+      <FIELD alias="Name" visible="true" link="False" useforurl="" prefix="" suffix="" name="NAME" />
+      <FIELD alias="Address" visible="true" name="ADD1_FIXED" link="False" useforurl="" prefix="" suffix="" />
+      <FIELD alias="City" visible="true" name="CITY" link="False" useforurl="" prefix="" suffix="" />
+      <FIELD alias="ZIP" visible="true" name="ZIP" link="False" useforurl="" prefix="" suffix="" />
+      <TABLE name="Surge Zones" whereexpression="" workspace="sde-ws_irm00sdf03" layerid="HSE.FDEMSurgeZone" showheaders="True" summarization="False" inline="True" join="Spatial">
+        <KEYS />
+        <FIELD alias="Storm Surge Category" visible="true" name="CATEGORY" link="False" useforurl="" prefix="" suffix="" />
+        <SORT_FIELDS />
+      </TABLE>
+    </LAYER>
+    <LAYER name="Migrant Labor Camps" analysistype="buffer" whereexpression="" workspace="sde-sde-ws_irm00sdf03" layerid="HSE.MigrantLaborCamps" showheaders="False" summarization="False">
+      <SORT_FIELDS />
+      <FIELD alias="Name" visible="true" link="False" useforurl="" prefix="" suffix="" name="NAME" />
+      <FIELD alias="Address" visible="true" name="ADD1_FIXED" link="False" useforurl="" prefix="" suffix="" />
+      <FIELD alias="City" visible="true" name="CITY" link="False" useforurl="" prefix="" suffix="" />
+      <FIELD alias="ZIP" visible="true" name="ZIP" link="False" useforurl="" prefix="" suffix="" />
+      <TABLE name="Surge Zones" whereexpression="" workspace="sde-ws_irm00sdf03" layerid="HSE.FDEMSurgeZone" showheaders="True" summarization="False" inline="True" join="Spatial">
+        <KEYS />
+        <FIELD alias="Storm Surge Category" visible="true" name="CATEGORY" link="False" useforurl="" prefix="" suffix="" />
+        <SORT_FIELDS />
+      </TABLE>
+    </LAYER>
+    <LAYER name="Swimming Pools" analysistype="buffer" whereexpression="" workspace="sde-sde-ws_irm00sdf03" layerid="HSE.SwimmingPools" showheaders="False" summarization="False">
+      <SORT_FIELDS />
+      <FIELD alias="Name" visible="true" link="False" useforurl="" prefix="" suffix="" name="NAME" />
+      <FIELD alias="Address" visible="true" name="ADD1_FIXED" link="False" useforurl="" prefix="" suffix="" />
+      <FIELD alias="City" visible="true" name="CITY" link="False" useforurl="" prefix="" suffix="" />
+      <FIELD alias="ZIP" visible="true" name="ZIP" link="False" useforurl="" prefix="" suffix="" />
+      <TABLE name="Surge Zones" whereexpression="" workspace="sde-ws_irm00sdf03" layerid="HSE.FDEMSurgeZone" showheaders="True" summarization="False" inline="True" join="Spatial">
+        <KEYS />
+        <FIELD alias="Storm Surge Category" visible="true" name="CATEGORY" link="False" useforurl="" prefix="" suffix="" />
+        <SORT_FIELDS />
+      </TABLE>
+    </LAYER>
+    <LAYER name="Tanning" analysistype="buffer" whereexpression="" workspace="sde-sde-ws_irm00sdf03" layerid="HSE.Tanning" showheaders="False" summarization="False">
+      <SORT_FIELDS />
+      <FIELD alias="Name" visible="true" link="False" useforurl="" prefix="" suffix="" name="NAME" />
+      <FIELD alias="Address" visible="true" name="ADD1_FIXED" link="False" useforurl="" prefix="" suffix="" />
+      <FIELD alias="City" visible="true" name="CITY" link="False" useforurl="" prefix="" suffix="" />
+      <FIELD alias="ZIP" visible="true" name="ZIP" link="False" useforurl="" prefix="" suffix="" />
+      <TABLE name="Surge Zones" whereexpression="" workspace="sde-ws_irm00sdf03" layerid="HSE.FDEMSurgeZone" showheaders="True" summarization="False" inline="True" join="Spatial">
+        <KEYS />
+        <FIELD alias="Storm Surge Category" visible="true" name="CATEGORY" link="False" useforurl="" prefix="" suffix="" />
+        <SORT_FIELDS />
+      </TABLE>
+    </LAYER>
+    <LAYER name="Bio-Medical Waste" analysistype="buffer" whereexpression="" workspace="sde-sde-ws_irm00sdf03" layerid="HSE.BioMedicalWaste" showheaders="False" summarization="False">
+      <SORT_FIELDS />
+      <FIELD alias="Name" visible="true" link="False" useforurl="" prefix="" suffix="" name="NAME" />
+      <FIELD alias="Address" visible="true" name="ADD1_FIXED" link="False" useforurl="" prefix="" suffix="" />
+      <FIELD alias="City" visible="true" name="CITY" link="False" useforurl="" prefix="" suffix="" />
+      <FIELD alias="ZIP" visible="true" name="ZIP" link="False" useforurl="" prefix="" suffix="" />
+      <TABLE name="Surge Zones" whereexpression="" workspace="sde-ws_irm00sdf03" layerid="HSE.FDEMSurgeZone" showheaders="True" summarization="False" inline="True" join="Spatial">
+        <KEYS />
+        <FIELD alias="Storm Surge Category" visible="true" name="CATEGORY" link="False" useforurl="" prefix="" suffix="" />
+        <SORT_FIELDS />
+      </TABLE>
+    </LAYER>
+    <LAYER name="Food Hygiene" analysistype="buffer" whereexpression="" workspace="sde-sde-ws_irm00sdf03" layerid="HSE.FoodHygiene" showheaders="False" summarization="False">
+      <SORT_FIELDS />
+      <FIELD alias="Name" visible="true" link="False" useforurl="" prefix="" suffix="" name="NAME" />
+      <FIELD alias="Address" visible="true" name="ADD1_FIXED" link="False" useforurl="" prefix="" suffix="" />
+      <FIELD alias="City" visible="true" name="CITY" link="False" useforurl="" prefix="" suffix="" />
+      <FIELD alias="ZIP" visible="true" name="ZIP" link="False" useforurl="" prefix="" suffix="" />
+      <TABLE name="Surge Zones" whereexpression="" workspace="sde-ws_irm00sdf03" layerid="HSE.FDEMSurgeZone" showheaders="True" summarization="False" inline="True" join="Spatial">
+        <KEYS />
+        <FIELD alias="Storm Surge Category" visible="true" name="CATEGORY" link="False" useforurl="" prefix="" suffix="" />
+        <SORT_FIELDS />
+      </TABLE>
+    </LAYER>
+    <LAYER name="Group Care" analysistype="buffer" whereexpression="" workspace="sde-sde-ws_irm00sdf03" layerid="HSE.GroupCare" showheaders="False" summarization="False">
+      <SORT_FIELDS />
+      <FIELD alias="Name" visible="true" link="False" useforurl="" prefix="" suffix="" name="NAME" />
+      <FIELD alias="Address" visible="true" name="ADD1_FIXED" link="False" useforurl="" prefix="" suffix="" />
+      <FIELD alias="City" visible="true" name="CITY" link="False" useforurl="" prefix="" suffix="" />
+      <FIELD alias="ZIP" visible="true" name="ZIP" link="False" useforurl="" prefix="" suffix="" />
+      <TABLE name="Surge Zones" whereexpression="" workspace="sde-ws_irm00sdf03" layerid="HSE.FDEMSurgeZone" showheaders="True" summarization="False" inline="True" join="Spatial">
+        <KEYS />
+        <FIELD alias="Storm Surge Category" visible="true" name="CATEGORY" link="False" useforurl="" prefix="" suffix="" />
+        <SORT_FIELDS />
+      </TABLE>
+    </LAYER>
+  </ISSUE>
+</ERA_ANALYSIS>

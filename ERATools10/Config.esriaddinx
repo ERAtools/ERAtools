@@ -1,0 +1,52 @@
+﻿<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>ERAtools10</Name>
+  <AddInID>{bb8905f1-4a50-4d3c-b25f-12fb056dc4d8}</AddInID>
+  <Description>ERAtools10 ArcMap Add-in, developed by URS Corporation for the Florida Fish and Wildlife Conservation Commission, City of Gainesville, U.S. Fish and Wildlife Service, and Florida Department of Health. Based on original work by the Florida Department of Environmental Protection.</Description>
+  <Version>3.1</Version>
+  <Image>Resources\ERATools10.png</Image>
+  <Author>URS Corporation</Author>
+  <Company>Florida Fish and Wildlife Conservation Commission, Florida Department of Environmental Protection, U.S. Fish and Wildlife Service, Florida Department of Health, URS Corporation</Company>
+  <Date>1/21/2016</Date>
+  <Targets>
+    <Target name="Desktop" version="10.1" />
+  </Targets>
+  <AddIn language="CLR4.0" library="ERATools10.dll" namespace="ERAtools10">
+    <ArcMap>
+      <Toolbars>
+        <Toolbar id="ERATools10_EraToolbar" caption="ERAtools" showInitially="true">
+          <Items>
+            <Menu refID="ERATools10_ERAtools" />
+            <Tool refID="ERATools10_ERAtoolsPointTool" />
+            <Tool refID="ERATools10_ERAtoolsPolylineTool" />
+            <Tool refID="ERATools10_ERAtoolsPolygonTool" />
+            <Button refID="ERATools10_ERAtoolsSelectTool" />
+            <Button refID="ERATools10_ERAtoolsSavedShapeTool" />
+            <Button refID="ERATools10_ERAtoolsClearButton" />
+          </Items>
+        </Toolbar>
+      </Toolbars>
+      <Commands>
+        <Button id="ERATools10_ERAtoolsClearButton" class="ERAtoolsClearButton" message="ERAtools Clear Button" caption="ERAtools Clear Button" tip="Click to clear analysis features from map" category="ERAtools" image="Resources\Clear.bmp" />
+        <Tool id="ERATools10_ERAtoolsPointTool" class="ERAtoolsPointTool" message="ERAtools Point Tool" caption="ERAtools Point Tool" tip="Draw a Point on the map for ERA Analysis" category="ERAtools" image="Resources\PointImage.bmp" cursor="Cross" />
+        <Tool id="ERATools10_ERAtoolsPolylineTool" class="ERAtoolsPolylineTool" message="ERAtools Line Tool" caption="ERAtools Line Tool" tip="Draw a Line on the map for ERA Analysis" category="ERAtools" image="Resources\LineImage.bmp" />
+        <Tool id="ERATools10_ERAtoolsPolygonTool" class="ERAtoolsPolygonTool" message="ERAtools Polygon Tool" caption="ERAtools Polygon Tool" tip="Draw a Polygon on the map for ERA Analysis" category="ERAtools" image="Resources\PolyImage.bmp" />
+        <Button id="ERATools10_ERAtoolsHelp" class="ERAtoolsHelp" message="ERAtools Help" caption="Help" tip="Click to display the ERAtools manual" category="ERAtools" image="Resources\help.bmp" />
+        <Button id="ERATools10_ERAtoolsAbout" class="ERAtoolsAbout" message="About ERAtools" caption="About" tip="Click to display the About dialog" category="ERAtools" />
+        <Button id="ERATools10_ERAtoolsSavedShapeTool" class="ERAtoolsSavedShapeTool" message="ERAtools Saved Shape Tool" caption="ERAtools Saved Shape Tool" tip="Click to display the Saved Shape dialog" category="ERAtools" image="Resources\SavedShape.bmp" />
+        <Button id="ERATools10_ERAtoolsSelectTool" class="ERAtoolsSelectTool" message="ERAtools Select Tool" caption="ERAtools Select Tool" tip="Click to Analyze selected features" category="ERAtools" image="Resources\SelectImage.bmp" />
+        <Button id="ERATools10_ERAtoolsSettings" class="ERAtoolsSettings" message="ERAtools Settings" caption="Settings" tip="Click to display the ERAtools Settings dialog window" category="ERAtools" />
+      </Commands>
+      <Menus>
+        <Menu id="ERATools10_ERAtools" caption="ERAtools" isRootMenu="false">
+          <Items>
+            <Button refID="ERATools10_ERAtoolsSelectTool" />
+            <Button refID="ERATools10_ERAtoolsSavedShapeTool" />
+            <Button refID="ERATools10_ERAtoolsSettings" separator="true" />
+            <Button refID="ERATools10_ERAtoolsHelp" separator="true" />
+            <Button refID="ERATools10_ERAtoolsAbout" />
+          </Items>
+        </Menu>
+      </Menus>
+    </ArcMap>
+  </AddIn>
+</ESRI.Configuration>

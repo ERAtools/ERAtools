@@ -1,0 +1,33 @@
+<ERA_ANALYSIS title="AHCA Facilities">
+  <WORKSPACES>
+    <SDEWORKSPACE name="sde-ws_irm00sdf03" server="irm00sdb03" instance="5151" database="" user="ERAtools" password="gisera2" />
+  </WORKSPACES>
+  <ISSUE name="AHCA Facilities" meta="">
+    <LAYER name="AHCA Facilities" analysistype="buffer" whereexpression="" workspace="sde-ws_irm00sdf03" layerid="HSE.AhcaFacility" showheaders="True" summarization="False">
+      <FIELD alias="Type" visible="true" name="TYPE" link="False" useforurl="" prefix="" suffix="" />
+      <SORT_FIELDS />
+      <FIELD alias="Facility Name" visible="true" name="FACILNAME" link="False" useforurl="" prefix="" suffix="" />
+      <FIELD alias="Address" visible="true" name="ADDRESS" link="False" useforurl="" prefix="" suffix="" />
+      <FIELD alias="City" visible="true" name="CITY" link="False" useforurl="" prefix="" suffix="" />
+      <FIELD alias="ZIP" visible="true" name="ZIPCODE" link="False" useforurl="" prefix="" suffix="" />
+      <FIELD alias="Phone" visible="true" name="PHONE" link="False" useforurl="" prefix="" suffix="" />
+      <FIELD alias="Bed Count" visible="true" name="BEDCOUNT" link="False" useforurl="" prefix="" suffix="" />
+      <TABLE name="Surge Zones" whereexpression="" workspace="sde-ws_irm00sdf03" layerid="HSE.FDEMSurgeZone" showheaders="True" summarization="False" inline="True" join="Spatial">
+        <KEYS />
+        <FIELD alias="Storm Surge Category" visible="true" name="CATEGORY" link="False" useforurl="" prefix="" suffix="" />
+        <SORT_FIELDS />
+      </TABLE>
+    </LAYER>
+    <LAYER name="Bed Count Summary by Type" analysistype="buffer" whereexpression="" workspace="sde-ws_irm00sdf03" layerid="HSE.AhcaFacility" showheaders="True" summarization="True">
+      <FIELD alias="Type" visible="true" name="TYPE" link="False" useforurl="" prefix="" suffix="" />
+      <FIELD alias="# Facilities" visible="true" link="False" useforurl="" prefix="" suffix="" name="BEDCOUNT" summary="COUNT" />
+      <FIELD alias="Total Bed Count" visible="true" name="BEDCOUNT" link="False" useforurl="" prefix="" suffix="" summary="SUM" />
+      <SORT_FIELDS />
+    </LAYER>
+    <LAYER name="Bed Count Summary" analysistype="buffer" whereexpression="" workspace="sde-ws_irm00sdf03" layerid="HSE.AhcaFacility" showheaders="True" summarization="True">
+      <FIELD alias="# Facilities" visible="true" link="False" useforurl="" prefix="" suffix="" name="BEDCOUNT" summary="COUNT" />
+      <FIELD alias="Total Bed Count" visible="true" name="BEDCOUNT" link="False" useforurl="" prefix="" suffix="" summary="SUM" />
+      <SORT_FIELDS />
+    </LAYER>
+  </ISSUE>
+</ERA_ANALYSIS>
