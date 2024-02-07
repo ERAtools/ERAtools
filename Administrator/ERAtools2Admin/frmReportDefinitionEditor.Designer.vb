@@ -140,7 +140,7 @@ Partial Class frmReportDefinitionEditor
         '
         Me.NewAccessWorkspace.Name = "NewAccessWorkspace"
         Me.NewAccessWorkspace.Size = New System.Drawing.Size(209, 22)
-        Me.NewAccessWorkspace.Text = "New &Access Workspace"
+        Me.NewAccessWorkspace.Text = "New &Geodatabase Workspace"
         '
         'NewIssue
         '

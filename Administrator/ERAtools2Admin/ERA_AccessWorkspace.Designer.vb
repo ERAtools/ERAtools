@@ -54,7 +54,7 @@ Partial Class ERA_AccessWorkspace
         txtDatabaseType.ReadOnly = True
         txtDatabaseType.Size = New System.Drawing.Size(244, 20)
         txtDatabaseType.TabIndex = 0
-        txtDatabaseType.Text = "Access Workspace"
+        txtDatabaseType.Text = "Geodatabase Workspace"
         '
         'Label4
         '

@@ -362,7 +362,7 @@ Public Class frmReportDefinitionEditor
     End Sub
 
     Public Sub NewAccessWorkspace_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles NewAccessWorkspace.Click
-        AddNode("ACCESSWORKSPACE", "New Access Workspace", WorkspacesNode)
+        AddNode("ACCESSWORKSPACE", "New Geodatabase Workspace", WorkspacesNode)
     End Sub
 
     'Private Sub NewFileGeodatabaseWorkspaceToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewFileGeodatabaseWorkspaceToolStripMenuItem.Click

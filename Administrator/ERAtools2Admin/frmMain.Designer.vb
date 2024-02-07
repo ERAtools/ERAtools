@@ -416,7 +416,7 @@ Partial Class frmMain
         '
         Me.NewAccessWorkspaceToolStripMenuItem.Name = "NewAccessWorkspaceToolStripMenuItem"
         Me.NewAccessWorkspaceToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
-        Me.NewAccessWorkspaceToolStripMenuItem.Text = "New &Access Workspace"
+        Me.NewAccessWorkspaceToolStripMenuItem.Text = "New &Geodatabase Workspace"
         '
         'NewIssueToolStripMenuItem
         '
