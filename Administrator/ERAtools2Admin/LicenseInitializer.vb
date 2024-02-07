@@ -147,46 +147,53 @@ Partial Friend Class LicenseInitializer
 
     Private Function Initialize() As Boolean
         'If RuntimeManager.ActiveRuntime Is Nothing Then Return False
+        Try
 
-        If m_requestedProducts Is Nothing OrElse m_requestedProducts.Count = 0 Then Return False
+            If m_requestedProducts Is Nothing OrElse m_requestedProducts.Count = 0 Then Return False
 
-        m_hasInitializedProduct = False
+            m_hasInitializedProduct = False
 
-        If InitializeLowerProductFirst Then
-            m_requestedProducts = m_requestedProducts.OrderBy(Function(c) CInt(c)).ToList
-        Else
-            m_requestedProducts = m_requestedProducts.OrderByDescending(Function(c) CInt(c)).ToList
-        End If
-
-        m_AoInit = New AoInitializeClass()
-        For Each code As esriLicenseProductCode In m_requestedProducts
-            'The following line is actually pointless, but it prevents a warning...
-            Dim prod As esriLicenseProductCode = code
-            Dim t As Task = Task.Factory.StartNew( _
-                Sub()
-                    Dim status As esriLicenseStatus = m_AoInit.IsProductCodeAvailable(prod)
-                    If (status = esriLicenseStatus.esriLicenseAvailable) Then
-                        status = m_AoInit.Initialize(prod)
-                        If (status = esriLicenseStatus.esriLicenseAlreadyInitialized OrElse _
+            If InitializeLowerProductFirst Then
+                m_requestedProducts = m_requestedProducts.OrderBy(Function(c) CInt(c)).ToList
+            Else
+                m_requestedProducts = m_requestedProducts.OrderByDescending(Function(c) CInt(c)).ToList
+            End If
+            Throw New Exception("Just pretending esri stuff isn't installed")
+            m_AoInit = New AoInitializeClass()
+            For Each code As esriLicenseProductCode In m_requestedProducts
+                'The following line is actually pointless, but it prevents a warning...
+                Dim prod As esriLicenseProductCode = code
+                Dim t As Task = Task.Factory.StartNew(
+                    Sub()
+                        Dim status As esriLicenseStatus = m_AoInit.IsProductCodeAvailable(prod)
+                        If (status = esriLicenseStatus.esriLicenseAvailable) Then
+                            status = m_AoInit.Initialize(prod)
+                            If (status = esriLicenseStatus.esriLicenseAlreadyInitialized OrElse
+                                    status = esriLicenseStatus.esriLicenseCheckedOut) Then
+                                m_hasInitializedProduct = True
+                            End If
+                        ElseIf (status = esriLicenseStatus.esriLicenseAlreadyInitialized OrElse
                                 status = esriLicenseStatus.esriLicenseCheckedOut) Then
                             m_hasInitializedProduct = True
                         End If
-                    ElseIf (status = esriLicenseStatus.esriLicenseAlreadyInitialized OrElse _
-                            status = esriLicenseStatus.esriLicenseCheckedOut) Then
-                        m_hasInitializedProduct = True
-                    End If
-                    m_productStatus.Add(prod, status)
-                End Sub)
-            Try
-                t.Wait(20000)
-                If HasInitializedProduct Then Exit For
-            Catch ex As Exception
-                'Don't worry about it.
-                LogException(ex, "Exception occurred while trying to check out a license. Don't worry about it too much.")
-            End Try
-        Next
-        m_requestedProducts.Clear()
-        'No product is initialized after trying all requested licenses, quit
+                        m_productStatus.Add(prod, status)
+                    End Sub)
+                Try
+                    t.Wait(20000)
+                    If HasInitializedProduct Then Exit For
+                Catch ex As Exception
+                    'Don't worry about it here, it's probably a timeout. subsequent check might still work
+                    LogException(ex, "Exception occurred while trying to check out a license.")
+                End Try
+            Next
+            m_requestedProducts.Clear()
+        Catch ex As Exception
+            'this is ok-ish means ArcGIS 10.x isn't installed
+            'EXCEPTION: Unhandled Exception	Retrieving the COM class factory for component with CLSID {E01BE902-CC85-4B13-A828-02E789E0DDA9} failed due to the following error: 80040154 Class not registered (Exception from HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG)).
+            LogException(ex, "Exception occurred while trying to check out a license.")
+
+        End Try
+
         Return HasInitializedProduct
     End Function
 
