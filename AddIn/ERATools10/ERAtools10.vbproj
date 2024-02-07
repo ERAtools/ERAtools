@@ -206,6 +206,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmERAToolsGUI.resx">
       <DependentUpon>frmERAToolsGUI.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSavedShapes.resx">
       <DependentUpon>frmSavedShapes.vb</DependentUpon>
