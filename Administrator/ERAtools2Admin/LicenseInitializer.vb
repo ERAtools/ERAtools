@@ -12,21 +12,19 @@
 '------------------------------------------------------------------------------
 
 Option Explicit On
+Imports ESRI.ArcGIS
+Imports ESRI.ArcGIS.esriSystem
 Imports System
 Imports System.Collections.Generic
 Imports System.Diagnostics
 Imports System.Linq
 Imports System.Threading.Tasks
 Imports System.Windows.Forms
-Imports ArcGIS.Core.Licensing
 
 Partial Friend Class LicenseInitializer
 
     Private Sub BindingArcGISRuntime(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.ResolveBindingEvent
         Try
-
-            LicenseInformation.CheckoutLicense()
-
             ' Modify ArcGIS runtime binding code as needed; for example, 
             ' the list of products and their binding preference order.
             For Each c As ProductCode In New ProductCode() {ProductCode.Desktop, ProductCode.Engine}
