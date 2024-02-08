@@ -158,7 +158,7 @@ Partial Friend Class LicenseInitializer
             Else
                 m_requestedProducts = m_requestedProducts.OrderByDescending(Function(c) CInt(c)).ToList
             End If
-            Throw New Exception("Just pretending esri stuff isn't installed")
+
             m_AoInit = New AoInitializeClass()
             For Each code As esriLicenseProductCode In m_requestedProducts
                 'The following line is actually pointless, but it prevents a warning...
