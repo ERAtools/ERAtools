@@ -98,7 +98,7 @@ Public MustInherit Class ERANode
     Public Sub Update()
         Select Case Me.ERANodeType
             Case ERANodeTypeEnum.AccessWorkspace
-                Me.Text = GetMyName() & " (Access Geodatabase)"
+                Me.Text = GetMyName() & " (Geodatabase)"
                 'Case ERANodeTypeEnum.FileGeodatabaseWorkspace
                 '    Me.Text = GetMyName() & " (File Geodatabase)"
             Case ERANodeTypeEnum.Field
